@@ -1,0 +1,55 @@
+{
+    "flowContents": {
+        "identifier": "def6796a-24ee-37f6-a9d2-469c8359e82f",
+        "name": "NiFi Flow",
+        "comments": "",
+        "position": {
+            "x": 0.0,
+            "y": 0.0
+        },
+        "_comment": "an array of Process Groups.",
+        "processGroups": [
+            {
+                "identifier": "38de0023-c928-3f99-a8f3-e3b69b7e82e8",
+                "name": "ProcessGroup-Name",
+                "comments": "",
+                "position": {
+                    "x": 376.0,
+                    "y": 272.0
+                },
+                "processGroups": [],
+                "remoteProcessGroups": [],
+                inputPorts": [],
+                "processors": [],
+                "outputPorts": [],
+                "connections": [],
+                "labels": [],
+                "funnels": [],
+                "controllerServices": [],
+                "variables": {},
+                "componentType": "PROCESS_GROUP",
+                "groupIdentifier": "def6796a-24ee-37f6-a9d2-469c8359e82f"
+            }
+        ],
+        "remoteProcessGroups": [],
+        "processors": [],
+        "inputPorts": [],
+        "outputPorts": [],
+        "_comment": "an array of connection between the Process Groups on the level of the highest flow",
+        "connections": [ ],
+        "labels": [],
+        "funnels": [],
+        "controllerServices": [],
+        "variables": {},
+        "componentType": "PROCESS_GROUP"
+    },
+    "externalControllerServices": {},
+    "parameterContexts": {
+        "ParametersGroup-Name": {
+            "name": "ParametersGroup-Name",
+             "parameters": []
+        }
+    },
+    "flowEncodingVersion": "1.0"
+}
+   
