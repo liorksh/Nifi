@@ -1,0 +1,295 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema attributeFormDefault="unqualified" elementFormDefault="qualified" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="template">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="description" />
+        <xs:element name="groupId" type="xs:string" />
+        <xs:element name="name" type="xs:string" />
+        <xs:element name="snippet">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="connections">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element name="id" type="xs:string" />
+                    <xs:element name="parentGroupId" type="xs:string" />
+                    <xs:element name="backPressureDataSizeThreshold" type="xs:string" />
+                    <xs:element name="backPressureObjectThreshold" type="xs:unsignedShort" />
+                    <xs:element name="destination">
+                      <xs:complexType>
+                        <xs:sequence>
+                          <xs:element name="groupId" type="xs:string" />
+                          <xs:element name="id" type="xs:string" />
+                          <xs:element name="type" type="xs:string" />
+                        </xs:sequence>
+                      </xs:complexType>
+                    </xs:element>
+                    <xs:element name="flowFileExpiration" type="xs:string" />
+                    <xs:element name="labelIndex" type="xs:unsignedByte" />
+                    <xs:element name="loadBalanceCompression" type="xs:string" />
+                    <xs:element name="loadBalancePartitionAttribute" />
+                    <xs:element name="loadBalanceStatus" type="xs:string" />
+                    <xs:element name="loadBalanceStrategy" type="xs:string" />
+                    <xs:element name="name" />
+                    <xs:element name="source">
+                      <xs:complexType>
+                        <xs:sequence>
+                          <xs:element name="groupId" type="xs:string" />
+                          <xs:element name="id" type="xs:string" />
+                          <xs:element name="type" type="xs:string" />
+                          <xs:element name="versionedComponentId" type="xs:string" />
+                        </xs:sequence>
+                      </xs:complexType>
+                    </xs:element>
+                    <xs:element name="zIndex" type="xs:unsignedByte" />
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+              <xs:element maxOccurs="unbounded" name="processGroups">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element name="id" type="xs:string" />
+                    <xs:element name="parentGroupId" type="xs:string" />
+                    <xs:element name="position">
+                      <xs:complexType>
+                        <xs:sequence>
+                          <xs:element name="x" type="xs:decimal" />
+                          <xs:element name="y" type="xs:decimal" />
+                        </xs:sequence>
+                      </xs:complexType>
+                    </xs:element>
+                    <xs:element minOccurs="0" name="versionedComponentId" type="xs:string" />
+                    <xs:element name="comments" />
+                    <xs:element name="contents">
+                      <xs:complexType>
+                        <xs:sequence>
+                          <xs:choice maxOccurs="unbounded">
+                            <xs:element name="inputPorts">
+                              <xs:complexType>
+                                <xs:sequence>
+                                  <xs:element name="id" type="xs:string" />
+                                  <xs:element name="parentGroupId" type="xs:string" />
+                                  <xs:element name="position">
+                                    <xs:complexType>
+                                      <xs:sequence>
+                                        <xs:element name="x" type="xs:decimal" />
+                                        <xs:element name="y" type="xs:decimal" />
+                                      </xs:sequence>
+                                    </xs:complexType>
+                                  </xs:element>
+                                  <xs:element minOccurs="0" name="versionedComponentId" type="xs:string" />
+                                  <xs:element minOccurs="0" name="allowRemoteAccess" type="xs:boolean" />
+                                  <xs:element name="comments" />
+                                  <xs:element name="concurrentlySchedulableTaskCount" type="xs:unsignedByte" />
+                                  <xs:element name="name" type="xs:string" />
+                                  <xs:element name="state" type="xs:string" />
+                                  <xs:element minOccurs="0" name="transmitting" type="xs:boolean" />
+                                  <xs:element name="type" type="xs:string" />
+                                  <xs:element name="validationErrors" type="xs:string" />
+                                </xs:sequence>
+                              </xs:complexType>
+                            </xs:element>
+                            <xs:element maxOccurs="unbounded" name="connections">
+                              <xs:complexType>
+                                <xs:sequence>
+                                  <xs:element name="id" type="xs:string" />
+                                  <xs:element name="parentGroupId" type="xs:string" />
+                                  <xs:element minOccurs="0" name="versionedComponentId" type="xs:string" />
+                                  <xs:element name="backPressureDataSizeThreshold" type="xs:string" />
+                                  <xs:element name="backPressureObjectThreshold" type="xs:unsignedShort" />
+                                  <xs:element name="destination">
+                                    <xs:complexType>
+                                      <xs:sequence>
+                                        <xs:element name="groupId" type="xs:string" />
+                                        <xs:element name="id" type="xs:string" />
+                                        <xs:element name="type" type="xs:string" />
+                                        <xs:element minOccurs="0" name="versionedComponentId" type="xs:string" />
+                                      </xs:sequence>
+                                    </xs:complexType>
+                                  </xs:element>
+                                  <xs:element name="flowFileExpiration" type="xs:string" />
+                                  <xs:element name="labelIndex" type="xs:unsignedByte" />
+                                  <xs:element name="loadBalanceCompression" type="xs:string" />
+                                  <xs:element name="loadBalancePartitionAttribute" />
+                                  <xs:element name="loadBalanceStatus" type="xs:string" />
+                                  <xs:element name="loadBalanceStrategy" type="xs:string" />
+                                  <xs:element name="name" />
+                                  <xs:element maxOccurs="unbounded" name="selectedRelationships" type="xs:string" />
+                                  <xs:element name="source">
+                                    <xs:complexType>
+                                      <xs:sequence>
+                                        <xs:element name="groupId" type="xs:string" />
+                                        <xs:element name="id" type="xs:string" />
+                                        <xs:element name="type" type="xs:string" />
+                                        <xs:element minOccurs="0" name="versionedComponentId" type="xs:string" />
+                                      </xs:sequence>
+                                    </xs:complexType>
+                                  </xs:element>
+                                  <xs:element name="zIndex" type="xs:unsignedByte" />
+                                </xs:sequence>
+                              </xs:complexType>
+                            </xs:element>
+                            <xs:element name="labels">
+                              <xs:complexType>
+                                <xs:sequence>
+                                  <xs:element name="id" type="xs:string" />
+                                  <xs:element name="parentGroupId" type="xs:string" />
+                                  <xs:element name="position">
+                                    <xs:complexType>
+                                      <xs:sequence>
+                                        <xs:element name="x" type="xs:decimal" />
+                                        <xs:element name="y" type="xs:decimal" />
+                                      </xs:sequence>
+                                    </xs:complexType>
+                                  </xs:element>
+                                  <xs:element name="versionedComponentId" type="xs:string" />
+                                  <xs:element name="height" type="xs:decimal" />
+                                  <xs:element name="label" />
+                                  <xs:element name="style" />
+                                  <xs:element name="width" type="xs:decimal" />
+                                </xs:sequence>
+                              </xs:complexType>
+                            </xs:element>
+                            <xs:element name="outputPorts">
+                              <xs:complexType>
+                                <xs:sequence>
+                                  <xs:element name="id" type="xs:string" />
+                                  <xs:element name="parentGroupId" type="xs:string" />
+                                  <xs:element name="position">
+                                    <xs:complexType>
+                                      <xs:sequence>
+                                        <xs:element name="x" type="xs:decimal" />
+                                        <xs:element name="y" type="xs:decimal" />
+                                      </xs:sequence>
+                                    </xs:complexType>
+                                  </xs:element>
+                                  <xs:element name="versionedComponentId" type="xs:string" />
+                                  <xs:element name="comments" />
+                                  <xs:element name="concurrentlySchedulableTaskCount" type="xs:unsignedByte" />
+                                  <xs:element name="name" type="xs:string" />
+                                  <xs:element name="state" type="xs:string" />
+                                  <xs:element name="type" type="xs:string" />
+                                </xs:sequence>
+                              </xs:complexType>
+                            </xs:element>
+                            <xs:element maxOccurs="unbounded" name="processors">
+                              <xs:complexType>
+                                <xs:sequence>
+                                  <xs:element name="id" type="xs:string" />
+                                  <xs:element name="parentGroupId" type="xs:string" />
+                                  <xs:element name="position">
+                                    <xs:complexType>
+                                      <xs:sequence>
+                                        <xs:element name="x" type="xs:decimal" />
+                                        <xs:element name="y" type="xs:decimal" />
+                                      </xs:sequence>
+                                    </xs:complexType>
+                                  </xs:element>
+                                  <xs:element minOccurs="0" name="versionedComponentId" type="xs:string" />
+                                  <xs:element name="bundle">
+                                    <xs:complexType>
+                                      <xs:sequence>
+                                        <xs:element name="artifact" type="xs:string" />
+                                        <xs:element name="group" type="xs:string" />
+                                        <xs:element name="version" type="xs:string" />
+                                      </xs:sequence>
+                                    </xs:complexType>
+                                  </xs:element>
+                                  <xs:element name="config">
+                                    <xs:complexType>
+                                      <xs:sequence>
+                                        <xs:element name="bulletinLevel" type="xs:string" />
+                                        <xs:element name="comments" />
+                                        <xs:element name="concurrentlySchedulableTaskCount" type="xs:unsignedByte" />
+                                        <xs:element name="descriptors">
+                                          <xs:complexType>
+                                            <xs:sequence>
+                                              <xs:element maxOccurs="unbounded" name="entry">
+                                                <xs:complexType>
+                                                  <xs:sequence>
+                                                    <xs:element name="key" type="xs:string" />
+                                                    <xs:element name="value">
+                                                      <xs:complexType>
+                                                        <xs:sequence>
+                                                          <xs:element name="name" type="xs:string" />
+                                                        </xs:sequence>
+                                                      </xs:complexType>
+                                                    </xs:element>
+                                                  </xs:sequence>
+                                                </xs:complexType>
+                                              </xs:element>
+                                            </xs:sequence>
+                                          </xs:complexType>
+                                        </xs:element>
+                                        <xs:element name="executionNode" type="xs:string" />
+                                        <xs:element name="lossTolerant" type="xs:boolean" />
+                                        <xs:element name="penaltyDuration" type="xs:string" />
+                                        <xs:element name="properties">
+                                          <xs:complexType>
+                                            <xs:sequence>
+                                              <xs:element maxOccurs="unbounded" name="entry">
+                                                <xs:complexType>
+                                                  <xs:sequence>
+                                                    <xs:element name="key" type="xs:string" />
+                                                    <xs:element minOccurs="0" name="value" type="xs:string" />
+                                                  </xs:sequence>
+                                                </xs:complexType>
+                                              </xs:element>
+                                            </xs:sequence>
+                                          </xs:complexType>
+                                        </xs:element>
+                                        <xs:element name="runDurationMillis" type="xs:unsignedByte" />
+                                        <xs:element name="schedulingPeriod" type="xs:string" />
+                                        <xs:element name="schedulingStrategy" type="xs:string" />
+                                        <xs:element name="yieldDuration" type="xs:string" />
+                                      </xs:sequence>
+                                    </xs:complexType>
+                                  </xs:element>
+                                  <xs:element name="executionNodeRestricted" type="xs:boolean" />
+                                  <xs:element name="name" type="xs:string" />
+                                  <xs:element maxOccurs="unbounded" name="relationships">
+                                    <xs:complexType>
+                                      <xs:sequence>
+                                        <xs:element name="autoTerminate" type="xs:boolean" />
+                                        <xs:element name="name" type="xs:string" />
+                                      </xs:sequence>
+                                    </xs:complexType>
+                                  </xs:element>
+                                  <xs:element name="state" type="xs:string" />
+                                  <xs:element name="style" />
+                                  <xs:element name="type" type="xs:string" />
+                                </xs:sequence>
+                              </xs:complexType>
+                            </xs:element>
+                          </xs:choice>
+                        </xs:sequence>
+                      </xs:complexType>
+                    </xs:element>
+                    <xs:element name="name" type="xs:string" />
+                    <xs:element name="variables">
+                      <xs:complexType>
+                        <xs:sequence minOccurs="0">
+                          <xs:element maxOccurs="unbounded" name="entry">
+                            <xs:complexType>
+                              <xs:sequence>
+                                <xs:element name="key" type="xs:string" />
+                                <xs:element name="value" type="xs:string" />
+                              </xs:sequence>
+                            </xs:complexType>
+                          </xs:element>
+                        </xs:sequence>
+                      </xs:complexType>
+                    </xs:element>
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="timestamp" type="xs:string" />
+      </xs:sequence>
+      <xs:attribute name="encoding-version" type="xs:decimal" use="required" />
+    </xs:complexType>
+  </xs:element>
+</xs:schema>
